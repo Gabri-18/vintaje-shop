@@ -1,1 +1,1 @@
-# vintaje-shop
+# Vintaje-Shop  ------------- © 2022 Vintaje-shop - Todos los derechos reservados

@@ -5,6 +5,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    background-color: antiquewhite;
 }
 /*--------------------------------------estilo base------------------------------------------------*/
 img{
@@ -20,6 +21,12 @@ h1, h2, h3, h4, h5, h6{
     margin: auto;
 }
 .container--flex{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.container--flex .column--50{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -59,26 +66,19 @@ h1, h2, h3, h4, h5, h6{
 /*------------------------------------estilo DEL MENU------------------------------------------------*/
 .main-nav{
     width: 100%;
-    position: relative;
+    position: initial;
     z-index: 2000;
     padding: 10px;
 }
-.icon-menu{
-    display: block;
-    color: white;
-    border: 1px solid white;
-    border-radius: 3px;
-    width: 40px;
-    height: 40px;
-    line-height: 45px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 1.5em;
 
-}
 .social-icon{
     display: flex;
     justify-content: space-between;
+}
+.social-icon .menu{
+    top: 55px ;
+    font-family: 'Source Code Pro', monospace;
+    ;
 }
 .social-icon [class*="icon-"] {
     color: black;
@@ -96,11 +96,11 @@ h1, h2, h3, h4, h5, h6{
     text-decoration: none;
 }
 .menu{
-    display: none;
+    display: block;
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
+    width: 32%;
     background-color: rgba(0,0,0,.85);
     padding: 0;
     margin: 0;
@@ -113,11 +113,24 @@ h1, h2, h3, h4, h5, h6{
     color: white;
     text-decoration: none;
 }
-.menu__link:hover{
-    background:blue;
+.main-nav ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
 }
-.menu__link--select{
-    background:blue;
+.main-nav li{
+    flex-grow: 1;
+    border-right: 1px solid #fff;
+}
+.main-nav li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.main-nav li:hover{
+    background-color: #1877f2;
 }
 /*------------------------------------estilo DEL banner----------------------------------------------*/
 .banner{
@@ -148,6 +161,7 @@ h1, h2, h3, h4, h5, h6{
     transform: translateX(6%) translateY(-50%);
     font-size: 1.5em;
     font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
 /*------------------------------------estilos principales--------------------------------------------*/
 .group--color .container{
@@ -166,7 +180,7 @@ h1, h2, h3, h4, h5, h6{
 .column__title{
     font-size: 1.3em;
 }
-.main__abaut__description .column--50:nth-child(2){
+.main__about__description .column--50:nth-child(2){
     padding: 10px;
 }
 .btn{
@@ -267,7 +281,7 @@ h1, h2, h3, h4, h5, h6{
 .column--33{
     width: 33%;
 }
-.main__abaut__description .column--50:nth-child(2){
+.main__about__description .column--50:nth-child(2){
     padding-left: 20px;
     font-size: .9em;
 }
@@ -277,7 +291,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .today-special__img{
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .social-icon .icon-facebook{
@@ -291,3 +305,4 @@ h1, h2, h3, h4, h5, h6{
 .social-icon .icon-mail{
     color: #ffc845;
 }
+
